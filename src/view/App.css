@@ -1,0 +1,28 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f8f9fb;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #616e7e;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 35%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #52a0ea;
+  margin-top: 1rem;
+  margin-left: 3px;
+}
