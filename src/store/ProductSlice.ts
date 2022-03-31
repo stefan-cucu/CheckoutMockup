@@ -24,7 +24,6 @@ const initialState: ProductStorage = {
 export const fetchProducts = createAsyncThunk("products/fetchProducts", async () => {
   const response = await fetch(`${REACT_APP_API_URL}`);
   const data = await response.json();
-  console.log(data);
   return data;
 });
 
@@ -58,6 +57,7 @@ const productStorageSlice = createSlice({
 
 export const { setProducts } = productStorageSlice.actions;
 
-export const getProducts = (state: ProductStorage) => state.products;
+export const getProducts = (state: any) => {return state.productStorage.products;};
+export const getProductsLoaded = (state: any) => state.productStorage.loaded;
 
 export default productStorageSlice.reducer;
