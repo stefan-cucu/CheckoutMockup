@@ -1,0 +1,36 @@
+.description-popup {
+  width: 50%;
+  min-height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+  z-index: 10;
+  position: absolute;
+
+  display: none;
+}
+
+.description-popup.active {
+  display: block;
+}
+
+.description-popup::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+
+  border-right: 10px solid white;
+}
+
+.description-popup > p {
+  margin: 0;
+  padding: 10px;
+  letter-spacing: 0.75px;
+}

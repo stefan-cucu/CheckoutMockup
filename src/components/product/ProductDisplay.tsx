@@ -12,16 +12,19 @@ import "./ProductDisplay.css";
 
 export interface ProductProps {
   product: Product;
+  rate: number;
+  symbol: string;
 }
 
 const ProductDisplay: React.FC<ProductProps> = (props) => {
   const dispatch = useDispatch();
+
   return (
     <div className="product">
       <h2>{props.product.name}</h2>
       <div className="product-price">
         <p>Price: </p>
-        <p>${props.product.price}</p>
+        <p>{props.symbol}{(props.product.price * props.rate).toFixed(2)}</p>
       </div>
       <button
         onClick={() => {

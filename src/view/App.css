@@ -1,6 +1,5 @@
 .App {
   width: 100vw;
-  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -8,6 +7,12 @@
   align-items: center;
 
   background-color: #f8f9fb;
+}
+
+@media (min-width: 900px) {
+  .App {
+    height: 100vh;
+  }
 }
 
 .checkout-container {
@@ -66,5 +71,33 @@ h1::after {
   }
   .flex-item {
     width: 47.5%;
+  }
+}
+
+.currency-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #616e7e;
+}
+
+.currency-container > p {
+  align-self: center;
+  margin-right: 10px;
+}
+
+select {
+  width: 20%;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #e5e8ef;
+  background-color: white;
+  padding: 0 10px;
+}
+
+@media (max-width: 900px) {
+  select {
+    width: 30%;
   }
 }

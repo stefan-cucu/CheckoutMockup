@@ -28,6 +28,7 @@ const cartSlice = createSlice({
     reducers: {
         setProduct: (state, action: PayloadAction<ICart>) => {
             const { product, quantity } = action.payload;
+            console.log(product, quantity);
             state.products = {...state.products, [product.id]: quantity};
         },
         removeProduct: (state, action: PayloadAction<Product>) => {
@@ -41,11 +42,6 @@ export const { setProduct, removeProduct } = cartSlice.actions;
 
 export const getCartProducts = (state: any) => {
     let asArray = Object.entries(state.cart.products);
-    for(let i = 0; i < asArray.length; i++) {
-        if(asArray[i][1] === 0) {
-            asArray.splice(i, 1);
-        }
-    }
     return asArray as unknown as [number, number][];
 };
 

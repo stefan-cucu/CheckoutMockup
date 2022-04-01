@@ -13,6 +13,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/:currency" element={<App />} />
         </Routes>
       </BrowserRouter>
     </Provider>
