@@ -29,3 +29,7 @@
 ```bash
 npm start
 ```
+
+## Demo
+
+- https://checkouttestmockup.netlify.app/
