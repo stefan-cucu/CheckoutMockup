@@ -46,7 +46,7 @@ export const getCartProducts = (state: any) => {
             asArray.splice(i, 1);
         }
     }
-    return Object.fromEntries(asArray);
+    return asArray as unknown as [number, number][];
 };
 
 export default cartSlice.reducer;

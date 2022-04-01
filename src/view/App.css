@@ -10,10 +10,29 @@
   background-color: #f8f9fb;
 }
 
+.checkout-container {
+  width: 90%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #f8f9fb;
+}
+
+@media (min-width: 900px) {
+  .checkout-container {
+    width: 70%;
+    height: 60%;
+  }
+}
+
 h1 {
   font-size: 2rem;
   font-weight: 400;
   color: #616e7e;
+  align-self: flex-start;
 }
 
 h1::after {
@@ -25,4 +44,27 @@ h1::after {
   background-color: #52a0ea;
   margin-top: 1rem;
   margin-left: 3px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-item {
+  width: 100%;
+}
+
+.flex-item > div {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 900px) {
+  .flex-container {
+    flex-direction: row;
+  }
+  .flex-item {
+    width: 47.5%;
+  }
 }

@@ -11,6 +11,7 @@ import {
 import ProductDisplay from "../components/product/ProductDisplay";
 import { Product } from "../types/Product";
 import "./App.css";
+import CartDisplay from "../components/cart/CartDisplay";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,12 +24,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Checkout page</h1>
       <div className="checkout-container">
-        {loaded &&
-          products.map((product: Product) => (
-            <ProductDisplay product={product} />
-          ))}
+        <h1>Checkout page</h1>
+        <div className="flex-container">
+          <div className="flex-item">
+            {loaded &&
+              products.map((product: Product) => (
+                <ProductDisplay product={product} />
+              ))}
+          </div>
+          <div className="flex-item">{loaded && <CartDisplay />}</div>
+        </div>
       </div>
     </div>
   );
